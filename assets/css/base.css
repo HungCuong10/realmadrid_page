@@ -1,0 +1,200 @@
+:root{
+    --white-color: #fff;
+    --text-color:#212121;
+    --text-small-color:rgb(105, 104, 104);
+    --black-color: #000;
+    --pimary-color: rgb(63, 208, 212);
+    --border-color: #dbdbdb;
+    --star-gold-color: #ffce3e;
+
+    --header-height: 50px;
+    --navbar-height: 34px;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    scroll-behavior: smooth; /*hành vi cuộn trang khi có sự kiện*/
+}
+
+body{
+    overflow-y: auto;
+    position: relative;
+}
+
+/* Btn */
+
+.btn{
+    color: #fff;
+    cursor: pointer;
+    background-color: var(--pimary-color);
+    text-decoration: none;
+    padding: 11px 16px;
+    display: inline-block;
+    margin-top: 10px;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    -webkit-appearance: none; /*Loại bỏ CSS mặc định trên trình duyệt Safari*/
+}
+
+.btn:hover{
+    opacity: 0.6;
+}
+
+.checked{
+    background-color: var(--pimary-color);
+}
+
+html{
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+    height: 6px;
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+    background: var(--pimary-color)
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Tạo khoảng cách column cho Responsive  */
+
+
+.grid {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto ;
+}
+
+.grid.wide{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.grid__full-width{
+    width: 100%;
+}
+/* Làm cho các thẻ con chứa nằm trên hàng ngang */
+.grid__row{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-left: 40px;
+}
+
+/* Test */
+.grid__column-2{
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 16.6667%;
+}
+/* Chia layout 5 cột */
+.grid__column-2-4{
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 21%;
+}
+
+.grid__column-10{
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 83.3334%;
+}
+
+
+/* Animation */
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
+}
+
+@keyframes growth{
+    from{
+        transform: scale(0);
+    }to{
+        transform: scale(1);
+    }
+}
+
+
+
+@keyframes appear{
+  
+    0%{
+        transform: translateY(-10%);
+        opacity: 0;
+        transform: scaleY(0.5);
+    }
+    100%{
+        
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes SlideInLeft{
+    0%{
+        opacity: 0;
+        transform: translateX(100%);
+    }100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeOut{
+    to{
+        transform: translateX(100%);
+    }
+}
+
+@keyframes zoom-img{
+    0%{
+        transform: scale(100%);
+    }
+    50%{
+        transform: scale(101%);
+    }
+}
+
+@keyframes text-slide{
+   
+    0% {
+        opacity: 0;
+        transform: translateY(0);
+        transform: scale(90%);
+    }
+    90% {
+        opacity: 1;
+        transform: translateY(-50%);
+    }100%{
+        opacity: 0;
+    }
+    
+}
